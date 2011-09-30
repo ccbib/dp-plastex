@@ -91,7 +91,7 @@ class FancyWrapper(textwrap.TextWrapper):
             # Balance line lengths -- better would be to review even older lines
             elif chunks and last_len != 0:
                 l = len(lines[-1][-1])
-                while last_len - 2*l > cur_len:
+                while last_len - l > cur_len + 1:
                     cur_line = [lines[-1][-1]] + cur_line
                     del lines[-1][-1]
                     cur_len +=l
