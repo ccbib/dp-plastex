@@ -333,4 +333,9 @@ class pgtextRenderer(BaseRenderer):
     def do_marginline(self, node):
         return u''
 
+    # Hyperref
+
+    def do_hyperref(self, node):
+        return self.default(node)
+
 Renderer = pgtextRenderer
