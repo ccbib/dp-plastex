@@ -124,7 +124,7 @@ class pgtextRenderer(BaseRenderer):
     """ Renderer for plain text documents for upload to Project Gutenberg"""
 
     outputType = unicode
-    fileExtension = '.utf8'
+    fileExtension = '_utf8.txt'
     lineWidth = 72
     underlinesym = u'\u02cd'   # Makron
     
@@ -163,7 +163,7 @@ class pgtextRenderer(BaseRenderer):
 
         # Clean up newlines
         #return re.sub(r'\s*\n\s*\n(\s*\n)+', r'\n\n\n', s)
-        return s
+        return re.sub(r'\n', r'\r\n', s)
     
     def postProcessText(self, s):
         #return re.sub(self.underlinesym+'+', '_', s)
