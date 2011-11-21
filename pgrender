@@ -2,11 +2,15 @@
 
 import sys
 from plasTeX.TeX import TeX
+from pgxhtml import Renderer as XHTMLRenderer
 from pgplain import Renderer
 
 doc = TeX(file=sys.argv[-1]).parse()
 doc.config['files']['split-level'] = -2
 doc.config['files']['filename'] = sys.argv[-1].split('.')[0]
+
+XHTMLRenderer().render(doc)
+
 doc.config['images']['enabled'] = 0
 doc.config['images']['imager'] = 'none'
 

@@ -1,0 +1,8 @@
+name: math ensuremath
+<span style="white-space:nowrap; " tal:attributes="title self/source" tal:content="self">math</span>
+
+name: displaymath equation equation*
+<div style="text-align:center; font-style:italic" tal:attributes="title self/source" tal:content="self">math</div>
+
+name: mathrm
+<span style="font-style:normal" tal:content="self">normal text</span>

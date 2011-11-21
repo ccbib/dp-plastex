@@ -1,0 +1,4 @@
+name: marginline
+<span class="marginpar" tal:content="self/attributes/text">margin par</span>
+
+name: publishers dedication uppertitleback lowertitleback
